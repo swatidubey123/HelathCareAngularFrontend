@@ -1,0 +1,55 @@
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.js"></script>
+
+</head>
+
+
+
+
+<div class="gfg">
+    <h1 class="first-txt">
+       User Registration Page
+    </h1>
+</div>
+<h1 name="h1">{{message}}</h1>
+<h3> Please fill in this form to Register Yourself</h3>
+
+<!--change made-->
+
+<!--<div>
+    <label>ID:</label>
+    <input type="number" name="id" [(ngModel)]="id"/>
+</div>-->
+<div>
+    <label>Name:</label>
+    <input type="text" name="name" [(ngModel)]="user.name"required><br>    
+    <span class="error" id="usernameError"></span>
+</div>
+<div>
+    <label>Email:</label>
+    <input type="email" name="email" [(ngModel)]="user.email" ><br>
+</div>
+<div>
+    <label>Password:</label>
+    <input type="password" name="password" [(ngModel)]="user.password"><br>
+</div>
+<!--<div>
+    <label>Repeat Password:</label>
+    <input type="password" [(ngModel)]="repeatPassword"/>
+</div>-->
+<div>
+    <label>Phno:</label>
+    <input type="text" name="phno" [(ngModel)]="user.phno"><br>
+</div>
+<div>
+    <label>User Type:</label>
+    <input type="text" name="userType" [(ngModel)]="user.userType"><br>
+</div>
+<!--<div>
+    <label>Order Time:</label>
+    <input type="time" [(ngModel)]="ordertime"/>
+</div>-->
+<button name="register" (click)="registerNow()">Register</button>

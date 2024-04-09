@@ -1,0 +1,12 @@
+<div *ngIf="isAdmin">
+    <a routerLink="/addmedicine">Add Medicine</a><br>
+    <!--a routerLink="/vieworders">View Orders</a><br>
+    <a routerLink="/viewpayments">View Payments</a-->
+  </div>
+  
+  <div *ngIf="!isAdmin">
+    <!-- Links for non-admin users -->
+    <a routerLink="/placeNeworder">Place Order</a><br>
+    <!--a routerLink="/viewprescription">View Prescription</a-->
+    
+  </div>

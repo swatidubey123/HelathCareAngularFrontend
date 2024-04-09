@@ -1,0 +1,37 @@
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.js"></script>
+
+</head>
+
+
+
+
+<div class="gfg">
+    <h1 class="first-txt">
+       Place Order
+    </h1>
+</div>
+<h1 name="h1">{{message}}</h1>
+
+
+
+<div>
+    <label for="medicines">Select Medicines:</label>
+    <select id="medicines" multiple [(ngModel)]="selectedMedicines">
+        <option *ngFor="let medicine of medicines" [ngValue]="medicine">{{ medicine.name }}</option>
+    </select>
+</div>
+<div>
+    <input type="hidden" name="user_id" [value]="userId">
+</div>
+<div>
+    <label>Quantity:</label>
+    <input type="number" name="quantity" [(ngModel)]="quantity" ><br>
+    <!--input type="number" name="quantity" [(ngModel)]="quantity"-->
+</div>
+
+
+<button name="placeorder" (click)="placeOrder()">Place Order</button>

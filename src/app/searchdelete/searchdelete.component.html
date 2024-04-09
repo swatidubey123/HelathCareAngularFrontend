@@ -1,0 +1,21 @@
+Enter an email to search <input type="email" name="email" [(ngModel)]="email"><button (click)="finduserbyemail()">search</button>
+<br>
+<br>
+<br>
+
+<table border="1">
+
+<tr><th>Id</th><th>Name</th><th>Email</th><th>Password</th><th>Phno</th><th>UserType</th><th>Action</th></tr>
+
+<tr *ngFor="let user of users">
+<td>{{user.user_id}}</td>
+<td>{{user.name}}</td>
+<td>{{user.email}}</td>
+<td>{{user.password}}</td>
+<td>{{user.phno}}</td>
+<td>{{user.userType}}</td>
+<td><button (click)="deleteuser(user.user_id)">Delete</button></td>
+
+</tr>
+
+</table>
